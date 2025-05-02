@@ -1,0 +1,311 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    font-family:"Montserrat:ital",sans-serif ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: rgb(250 250 249 / var(--tw-bg-opacity, 1));
+
+}
+
+.side-bar{
+    background-color: #120b0b;
+    width: 25% ;
+    margin-top: 50px;
+    border-top-right-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    color: aliceblue;
+    overflow-y: auto;
+}
+.side-bar div{
+    text-align:left;
+    padding-left: 20px;
+}
+
+.side-bar h2{
+    font-size: 3rem ;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+#add-button{
+    padding: 8px 16px; /* px-4 (16px) and py-2 (8px) */
+    font-size: 1.8rem; /* text-xs (extra small text) */
+    border-radius: 10px; /* rounded-md */
+    background-color: #44403C; /* bg-stone-700 */
+    color: #A8A29E; /* text-stone-400 */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#add-button:hover{
+    background-color: #57534E; /* hover:bg-stone-600 */
+    color: #FAFAF9; /* hover:text-stone-100 */
+}
+
+.projects-list{
+    text-align:left;
+    padding-left: 20px;
+    list-style:none;
+    margin-top: 40px;
+}
+
+.projects-list li{
+    padding: 15px 0;
+}
+
+.projects-list a{
+    display: block;
+    width: 100%; 
+    background-color:#120b0b ;
+    color: #A8A29E;
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 4px 8px; 
+    margin: 4px 0; 
+    cursor: pointer;
+}
+
+.projects-list a:hover{
+    color: #E7E5E4; /* hover:text-stone-200 */
+    background-color: #1C1917; /* hover:bg-stone-800 */
+}
+
+.highlight{
+    color: #E7E5E4 !important;
+    background-color: #1C1917 !important; 
+}
+
+form{
+    width: 50%;
+    margin: 100px 50px 150px 20px;
+    padding: 30px;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+}
+.form-buttons button{
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: solid 1px rgb(250 250 249 / var(--tw-bg-opacity, 1)) ;
+    margin-left: 15px;
+    background-color: rgb(250 250 249 / var(--tw-bg-opacity, 1));
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#save{
+    background-color: #120b0b ;
+    color:rgb(250 250 249 / var(--tw-bg-opacity, 1));
+    padding: 10px 15px;
+}
+#cancel:hover{
+    background-color: #120b0b ;
+    color:rgb(250 250 249 / var(--tw-bg-opacity, 1));
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin:15px 0 40px 0;
+    font-size: 2rem;
+}
+
+.input-group label{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #78716C;
+    margin-bottom: 8px;
+}
+
+.input-group input,textarea{
+    width: 100%; /* w-full (full width) */
+    padding: 4px; /* p-1 (1 Tailwind spacing unit = 4px) */
+    border-bottom: 2px solid #D6D3D1;
+    border-radius: 4px; /* rounded-sm (small border radius) */
+    background-color: #E7E5E4; /* bg-stone-200 */
+    color: #57534E; /* text-stone-600 */
+    transition: border-color 0.2s ease; 
+    font-size: 1.8rem;
+}
+.input-group input:focus,textarea:focus {
+    border-color: #57534E; /* focus:border-stone-600 */
+    outline: none; /* Ensures no default outline */
+}
+
+
+.no-project-section{
+    width: 70%;
+    margin: 100px 50px 150px 30px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.no-project-section img{
+    width: 15%;
+    margin-bottom: 20px;
+}
+.no-project-section h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #5d5753;
+}
+.no-project-section p{
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #78716C;
+}
+.no-project-section button{
+    padding: 16px 16px; 
+    font-size: 3rem; 
+    border-radius: 10px;
+    background-color: #44403C; 
+    color: #A8A29E;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.5s ease;
+}
+.no-project-section button:hover{
+    transform: scale(1.1);
+    color: #c7c1bd;
+}
+
+dialog {
+    padding: 16px; /* Equivalent to p-4 */
+    border-radius: 6px; /* Equivalent to rounded-md */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+}
+
+dialog::backdrop {
+    background-color: rgba(28, 25, 23, 0.9); /* Equivalent to backdrop:bg-stone-900/90 */
+}
+
+dialog form{
+    display: flex;
+    justify-content: right;
+    margin:20px 2px 5px 200px;
+    padding: 0;
+}
+
+dialog h2{
+    margin: 10px 0;
+    font-size: 2.5rem;
+    color:#1e0b0b;
+}
+
+dialog p{
+    margin: 10px 0;
+    color:#030202;
+    font-size: 2rem;
+}
+
+dialog button{
+    background-color: #241010 ;
+    color:rgb(250 250 249 / var(--tw-bg-opacity, 1));
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}
+
+.selected-project{
+    width: 50%;
+    margin: 100px 100px 150px 75px;
+}
+
+.selected-project header{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #b4aeab;
+}
+
+.selected-project h1{
+ font-size: 5rem;
+ font-weight: bold;
+ margin-bottom: 1rem;
+ color: #321d1d;
+}
+
+.selected-project button{
+    padding: 10px;
+    margin-left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem ;
+    color:hsl(19, 18%, 21%);
+}
+.selected-project button:hover{
+    color: hsl(25, 32%, 7%);
+}
+.selected-project p{
+    font-size: 3rem;
+    margin: 25px 0;
+    color:#78716C;
+}
+
+.tasks input{
+    width: 200px;
+    height: 30px;
+    font-size: 2rem;
+}
+
+.tasks h2{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #321d1d;
+}
+
+.tasks p{
+    font-size: 3rem;
+    margin: 60px 0;
+    color:#78716C;
+}
+
+.tasks ul{
+    list-style: none;
+    margin-top: 60px;
+    font-size: 3.5rem;
+} 
+.tasks li{
+    background-color: #e7dfd9;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#redHover:hover{
+    color: rgb(188, 12, 12) ;
+}
+
+
+
+@media (max-width:1310px){
+    .side-bar h2{
+        font-size: 2.5rem ;
+    }
+}
+
+@media (max-width:1042px){
+    h2{
+        font-size: 2rem !important;
+    }
+}
